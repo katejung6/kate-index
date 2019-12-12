@@ -1,0 +1,41 @@
+body{
+	font-family: helvetica;
+	background:  #fde7ed;
+  background: -webkit-linear-gradient(top, #fde7ed 0%, #a7a6f2 100%);
+  background: linear-gradient(to bottom,  #fde7ed 0%, #a7a6f2 100%);
+  margin: 0;
+  padding: 0;
+}
+
+.image{
+display: block;
+  margin-left: auto;
+  margin-right: auto;
+text-align: center;
+}
+
+.one{
+display: block;
+  margin-left: auto;
+  margin-right: auto;
+text-align: center;
+width: 60%;
+padding-bottom: 5%;
+padding-top: 2%;
+}
+
+
+h1{
+  text-align: center;
+  color: black;
+  font-size: 24px;
+}
+
+
+p{
+text-align: center;
+font-size: 16px;
+line-height: 20px;
+}
+
+

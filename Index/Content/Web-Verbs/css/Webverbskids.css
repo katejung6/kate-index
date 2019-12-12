@@ -1,0 +1,85 @@
+/* Google Fonts */
+
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+/* Global */
+
+html {
+  min-height: 100%;
+  overflow: hidden;
+}
+body {
+  height: calc(100vh - 8em);
+  margin: 0;
+  padding: 0;
+  background-image: url("../images/starswide.svg");
+  background-size: 95%;
+}
+.line-1 {
+  position: relative;
+  top: 76%;
+  width: 100vw;
+  padding-bottom: 4px;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255, 255, 255, .75);
+  font-size: 190%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+  font-family: Brevia;
+  font-weight: bold;
+}
+.anim-typewriter {
+  animation: typewriter 3s steps(35) 0.5s 1 normal both, blinkTextCursor 300ms steps(20) infinite normal;
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100vw;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, .75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+.button {
+  position: absolute;
+  top: 72%;
+  left: 47%;
+  padding: 11px 25px;
+  font-size: 17px;
+  font-family: Brevia;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #B2A5E8;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 5px #CCC;
+}
+.button:hover {
+  background-color: #8D80D8
+}
+.button:active {
+  background-color: #8D80D8;
+  box-shadow: 0 5px #CCC;
+}
+.rocket {
+  width: 20%;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.buttondiv {
+  display: none;
+}

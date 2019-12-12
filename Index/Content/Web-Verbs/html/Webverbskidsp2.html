@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+	</script>
+	<link href="https://use.typekit.net/dnt2cjc.css" rel="stylesheet">
+	<link href="../css/Webverbskidsp2.css" rel="stylesheet">
+	<script src="../js/Webverbskidsp2.js">
+	</script>	
+
+	<title>
+	</title>
+</head>
+
+<body>
+	<audio autoplay="loop" controls=""><source src="../music/spacemusic.mp3" type="audio/ogg"></audio>
+
+	<div class="container">
+		<div id="spacecat-intro">
+			<p class="Title">This Is a Spacecat:</p>
+
+
+			<p class="line-2 anim-typewriter2">Your tour guide of the Galaxy.</p>
+		</div>
+
+
+		<div class="container">
+			<div id="spacecat-intro2">
+				<p class="Title">Great Job,</p>
+
+
+				<p class="line-2 anim-typewriter2">Now let's begin our adventure!</p>
+			</div>
+			<img class="cat" id="cat" src="../images/cat-03.svg">
+
+			<div id="name-cat-page">
+				<p class="instructions">Give your Spacecat a name!</p>
+
+
+				<div class="inputinfo">
+					<input class="cat-name" type="text" value=""> <button class="button" onclick="setName();">Done</button>
+				</div>
+			</div>
+		</div>
+
+
+		<div id="hat-cat-page" style="display: none;">
+			<p class="instructions">Press a key to give <span id="cat-name-set"></span> an astronaut hat.</p>
+		</div>
+
+
+		<div id="rocket-cat-page" style="display: none;">
+			<p class="Title">Hat, Check!</p>
+
+
+			<p class="instructions">Now press a key to give <span id="rocket-cat-name-set"></span> a rocket!</p>
+		</div>
+
+
+		<div class="row rocket" id="rocket-move-page" style="display: none;">
+		<p class="Title">Rocket, Check!</p>
+
+
+		<p class="instructions">Press a key to move <span id="rocket-move-cat-name-set"></span>'s rocket!</p>
+		<img class="cat" id="rocket" src="../images/rocketsideways.svg">
+		</div>
+	</div>
+
+
+	<div class="False" id="Jupiter-false" style="display: none;">
+		Wrong! Try Again.
+	</div>
+
+
+	<div class="planetpage">
+		<div id="planet1" style="display: none">
+			<div class="Jupiter" id="Jupiter"><img class="Jupiter" src="../images/Jupiter.svg" style="display: none;">
+			</div>
+			<img class="cat" id="planet" src="../images/Jupiter.svg">
+			<p class="Title">Copy the Planet's Name!</p>
+			<div class="Jupitertext">
+				Jupiter
+			</div>
+
+
+			<div class="planettextbox">
+				<input class="cat-name" id="planet1-text" type="text"> <input class="button" onclick="verifyPlanet(this, 'Jupiter', 1)" type="button" value="Enter">
+				<div class="False" id="planet1-false" style="display: none;">
+					Wrong! Try Again.
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="planetpage2">
+		<div id="planet2" style="display: none">
+			<div class="Venus" id="Venus"><img class="Venus" src="../images/Venus.svg" style="display: none;">
+			</div>
+			<img class="cat" id="planet" src="../images/Venus.svg">
+			<p class="Title">Copy the Planet's Name!</p>
+			<div class="Jupitertext">
+				Venus
+			</div>
+
+
+			<div class="planettextbox">
+				<input class="cat-name" id="planet2-text" type="text"> <input class="button" onclick="verifyPlanet(this, 'Venus', 2)" type="button" value="Enter">
+				<div class="False" id="planet2-false" style="display: none;">
+					Wrong! Try Again.
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="planetpage3">
+		<div id="planet3" style="display: none">
+			<div class="Neptune" id="Neptune"><img class="Neptune" src="../images/Neptune.svg" style="display: none;">
+			</div>
+			<img class="cat" id="planet" src="../images/Neptune.svg">
+			<p class="Title">Copy the Planet's Name!</p>
+			<div class="Jupitertext">
+				Neptune
+			</div>
+
+
+			<div class="planettextbox">
+				<input class="cat-name" id="planet3-text" type="text"> <input class="button" onclick="verifyPlanet(this, 'Neptune', 3)" type="button" value="Enter">
+
+				<div class="False" id="planet3-false" style="display: none;">
+					Wrong! Try Again.
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="planetpage4">
+		<div id="planet4" style="display: none">
+			<div class="Earth" id="Earth"><img class="Earth" src="../images/Earth.svg" style="display: none;">
+			</div>
+			<img class="cat" id="planet" src="../images/Earth.svg">
+			<p class="Title">Copy the Planet's Name!</p>
+			<div class="Jupitertext">
+				Earth
+			</div>
+
+
+			<div class="planettextbox">
+				<input class="cat-name" id="planet4-text" type="text"> <input class="button" onclick="verifyPlanet(this, 'Earth', 4)" type="button" value="Enter">
+				<div class="False" id="planet4-false" style="display: none;">
+					Wrong! Try Again.
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="planetpage5">
+		<div id="planet5" style="display: none">
+			<div class="Saturn" id="Saturn"><img class="Saturn" src="../images/Saturn.svg" style="display: none;">
+			</div>
+			<img class="cat" id="planet" src="../images/Saturn.svg">
+			<p class="Title">Copy the Planet's Name!</p>
+			<div class="Jupitertext">
+				Saturn
+			</div>
+
+
+			<div class="planettextbox">
+				<input class="cat-name" id="planet5-text" type="text"> <input class="button" onclick="verifyPlanet(this, 'Saturn', 5)" type="button" value="Enter">
+				<div class="False" id="planet5-false" style="display: none;">
+					Wrong! Try Again.
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="planetpage6">
+		<div id="planet6" style="display: none">
+			<div class="Mars" id="Mars"><img class="Mars" src="../images/Mars.svg" style="display: none;">
+			</div>
+			<img class="cat" id="planet" src="../images/Mars.svg">
+			<p class="Title">Copy the Planet's Name!</p>
+			<div class="Jupitertext">
+				Mars
+			</div>
+
+
+			<div class="planettextbox">
+				<input class="cat-name" id="planet6-text" type="text"> <input class="button" onclick="verifyPlanet(this, 'Mars', 6)" type="button" value="Enter">
+				<div class="False" id="planet6-false" style="display: none;">
+					Wrong! Try Again.
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="planetpage7">
+		<div id="planet7" style="display: none">
+			<div class="Mercury" id="Mercury"><img class="Mercury" src="../images/Mercury.svg" style="display: none;">
+			</div>
+			<img class="cat" id="planet" src="../images/Mercury.svg">
+			<p class="Title">Copy the Planet's Name!</p>
+			<div class="Jupitertext">
+				Mercury
+			</div>
+
+
+			<div class="planettextbox">
+				<input class="cat-name" id="planet7-text" type="text"> <input class="button" onclick="verifyPlanet(this, 'Mercury', 7)" type="button" value="Enter">
+				<div class="False" id="planet7-false" style="display: none;">
+					Wrong! Try Again.
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="planetpage8">
+		<div id="planet8" style="display: none">
+			<div class="Uranus" id="Uranus"><img class="Uranus" src="../images/Uranus.svg" style="display: none;">
+			</div>
+			<img class="cat" id="planet" src="../images/Uranus.svg">
+			<p class="Title">Copy the Planet's Name!</p>
+			<div class="Jupitertext">
+				Uranus
+			</div>
+
+
+			<div class="planettextbox">
+				<input class="cat-name" id="planet8-text" type="text"> <input class="button" onclick="verifyPlanet(this, 'Uranus', 8)" type="button" value="Enter">
+				<div class="False" id="planet8-false" style="display: none;">
+					Wrong! Try Again.
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="planetpage9">
+		<div id="planet9" style="display: none">
+			<div class="Uranus" id="Uranus"><img class="Uranus" src="../images/Uranus.svg" style="display: none;">
+			</div>
+			<img class="cat" id="planet" src="../images/Uranus.svg">
+			<p class="Title">Copy the Planet's Name!</p>
+			<div class="Jupitertext">
+				Uranus
+			</div>
+
+
+			<div class="planettextbox">
+				<input class="cat-name" id="planet9-text" type="text"> <input class="button" onclick="verifyPlanet(this, 'Uranus', 9)" type="button" value="Enter">
+				<div class="False" id="planet9-false" style="display: none;">
+					Wrong! Try Again.
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="RememberPlanet" id="RememberPlanet" style="display: none">
+		<div id="RememberPlanet1">
+			<p class="Title">Can You Remember All 8 Planets<br>
+			Before Time Runs Out?</p>
+
+
+			<div class="countdown">
+			</div>
+
+
+			<div class="start" id="start"><img src="../images/start.svg"> <img class="Marsguess" id="Mars-image" src="../images/Mars.svg" style="display:none;"> <img class="Jupiterguess" id="Jupiter-image" src="../images/Jupiter.svg" style="display:none;"> <img class="Saturnguess" id="Saturn-image" src="../images/Saturn.svg" style="display:none;"> <img class="Earthguess" id="Earth-image" src="../images/Earth.svg" style="display:none;"> <img class="Neptuneguess" id="Neptune-image" src="../images/Neptune.svg" style="display:none;"> <img class="Venusguess" id="Venus-image" src="../images/Venus.svg" style="display:none;"> <img class="Uranusguess" id="Uranus-image" src="../images/Uranus.svg" style="display:none;"> <img class="Mercuryguess" id="Mercury-image" src="../images/Mercury.svg" style="display:none;"></div>
+		</div>
+
+
+		<div class="Jupitertext">
+			Type a planet name
+		</div>
+
+
+		<div class="planettextbox">
+			<input class="cat-name" id="planet-guess" type="text"> <input class="button" onclick="planetCheck()" type="button" value="Enter">
+
+			<div class="False" id="PlanetCheckError" style="display: none;">
+				Not a planet. Try Again.
+			</div>
+		</div>
+	</div>
+</body>
+</html>

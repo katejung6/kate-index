@@ -1,0 +1,285 @@
+/* Google Fonts */
+
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+/* Global */
+
+html {
+  min-height: 100%;
+  overflow: hidden;
+}
+body {
+  height: calc(100vh - 8em);
+  margin: 0;
+  padding: 0;
+  background-image: url("../images/starswide.svg");
+  background-size: 95%;
+  /*background-size: 250px;
+background-repeat: repeat;*/
+}
+audio {
+  width: 150px;
+  display: block;
+  margin: 20px;
+}
+.Title {
+  position: relative;
+  width: 100vw;
+  padding-bottom: 4px;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255, 255, 255, .75);
+  font-size: 190%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+  font-family: Brevia;
+  font-weight: bold;
+}
+.line-2 {
+  position: relative;
+  width: 100vw;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255, 255, 255, .75);
+  font-size: 150%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+  font-family: Brevia;
+  font-weight: bold;
+}
+/*.container{
+align-content: center;
+margin-left: auto;
+margin-right: auto;
+}*/
+
+.instructions {
+  width: 100vw;
+  text-align: center;
+  font-size: 120%;
+  position: absolute;
+  top: 78%;
+  font-family: Brevia;
+  font-weight: normal;
+}
+#planetpage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.planet-01 {
+  position: absolute;
+  left: 100px;
+}
+/* Animation 
+
+animation-delay: 3s;*/
+
+.anim-typewriter {
+  animation: typewriter 3s steps(35) 0.5s 1 normal both, blinkTextCursor 300ms steps(20) infinite normal;
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 10em;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, .75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+.anim-typewriter2 {
+  animation: typewriter 3s steps(35) 0.5s 1 normal both, blinkTextCursor 300ms steps(35) infinite normal;
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100vw;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, .75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+#spacecat-intro2 {
+  display: none;
+}
+.cat {
+  width: 35%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.rocket.row {
+  display: none;
+}
+.rocket {
+  display: none;
+}
+#rocket.cat {
+  width: 42%;
+}
+.Jupitertext {
+width: 100vw;
+  text-align: center;
+  font-size: 120%;
+  position: absolute;
+  top: 76%;
+  font-family: Brevia;
+  font-weight: normal;
+}
+.inputinfo {
+  position: absolute;
+  top: 84%;
+  width: 100vw;
+  text-align: center;
+}
+.planettextbox {
+  position: absolute;
+  top: 80%;
+  width: 100vw;
+  text-align: center;
+}
+.cat-name {
+  height: 20%;
+  padding: 8px 18px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-radius: 4px;
+  outline: none;
+}
+input[type=text]:focus {
+  border: 2px solid #555;
+}
+.button {
+  display: inline-block;
+  padding: 10px 22px;
+  font-size: 13px;
+  font-family: Brevia;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #B2A5E8;
+  border: none;
+  border-radius: 10px;
+  margin-left: 0.2%;
+}
+.button:hover {
+  background-color: #8D80D8
+}
+.button:active {
+  background-color: #8D80D8;
+}
+.start {
+  width: 20%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.enterbutton {
+  display: inline-block;
+  padding: 10px 22px;
+  font-size: 13px;
+  font-family: Brevia;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #B2A5E8;
+  border: none;
+  border-radius: 10px;
+}
+.countdown {
+  font-size: 120%;
+  position: absolute;
+  top: 24%;
+  left: 50%;
+
+
+
+  transform: translate(-50%, -50%);
+  font-family: Brevia;
+  font-weight: normal;
+}
+.Marsguess {
+  width: 40%;
+  position: absolute;
+  top: 10px;
+  left: 600px;
+}
+.Jupiterguess {
+  width: 40%;
+  position: absolute;
+  top: 300px;
+  left: 440px;
+}
+.Venusguess {
+  width: 40%;
+  position: absolute;
+  top: 400px;
+  left: 750px;
+}
+.Earthguess {
+  width: 40%;
+  position: absolute;
+  top: 10px;
+  left: 300px;
+}
+.Mercuryguess {
+  width: 40%;
+  position: absolute;
+  top: 200px;
+  left: -200px;
+}
+.Neptuneguess {
+  width: 40%;
+  position: absolute;
+  top: 50px;
+  left: -550px;
+}
+.Uranusguess {
+  width: 40%;
+  position: absolute;
+  top: 400px;
+  left: -450px;
+}
+.Saturnguess {
+  width: 40%;
+  position: absolute;
+  top: -100px;
+  left: -150px;
+}
+.False {
+  font-size: 85%;
+  position: absolute;
+  font-family: Brevia;
+  font-weight: normal;
+  top: 100%;
+  width: 100vw;
+  color: #555;
+  text-align: center;
+}
